@@ -35,9 +35,13 @@ html, body {
 }
 
 #page2 {
+<<<<<<< HEAD
     background-image: url('Image_from_iOS_(1).jpg');
    background-size: cover;
     
+=======
+    background-image: url("/Index_files/Image_from_iOS_(1)");
+>>>>>>> cdd842ad0c42fb405e91824f92d4f6b78959a212
 }
 
 #page3 {
