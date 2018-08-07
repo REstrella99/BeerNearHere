@@ -35,7 +35,7 @@ html, body {
 }
 
 #page2 {
-    background-image: url("Index_files/Image_from_iOS_(1)");
+    background-color: azure;
 }
 
 #page3 {
@@ -51,10 +51,4 @@ html, body {
 }
 a{
     color:white;
-}
-body {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: black;
 }
