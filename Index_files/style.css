@@ -29,6 +29,9 @@ html, body {
 #beerNearHere {
     font-family: 'Mogra', cursive;
     font-size:50px;
+    margin-bottom:25px;
+    color:sandybrown;
+	
 }
 
 #page1 {
