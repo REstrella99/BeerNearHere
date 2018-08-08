@@ -102,22 +102,37 @@
                 <div class="form-group">  <!-- Checkbox Group !-->
                     <label class="control-label" id="questionPage"></label>
                     <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="preference" value="yes">
-                        Yes
+                            <label><div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">Do you prefer strong beer or weak beer?</label>
+    <input type="text" id="quest" name="firstname">
+          
+           <label>
+                        <input type="checkbox" name="preference" value="strong">
+                        Strong
                     </label>
                     </div>
                     <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="preference" value="no">
-                        No
+                        <input type="checkbox" name="preference" value="weak">
+                        Weak
                     </label>
+
+ 
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div></label>
+                   
                     </div>
                 </div>	
                 
-                <div class="form-group"> <!-- Submit button !-->
-                    <button class="btn btn-primary " name="submit" type="submit">Submit</button>
-                </div>
+               
             </form>
           </div>
         </div>
