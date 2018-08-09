@@ -5,6 +5,15 @@ html, body {
     color: white;
 }
 
+.quest{
+	margin-bottom:5px;
+	background-color: rgb(241, 199, 97);
+	font-family: 'Mogra', cursive;
+	
+	
+	
+}
+
 .stage {
     display: table-cell;
     vertical-align: middle;
@@ -30,7 +39,7 @@ html, body {
     font-family: 'Mogra', cursive;
     font-size:50px;
     margin-bottom:25px;
-    color:sandybrown;
+    color:rgb(241, 199, 97);
 	
 }
 
@@ -45,7 +54,7 @@ html, body {
 }
 
 #page3 {
-    background-color: goldenrodyellow;
+    background-color: rgb(241, 199, 97);
 }
 
 #page4 {
