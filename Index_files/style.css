@@ -50,6 +50,7 @@ html, body {
 
 #page4 {
     background-image: url("craft-beer.jpg");
+	background-size: cover;
 }
 
 #page5 {
