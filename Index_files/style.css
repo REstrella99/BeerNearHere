@@ -28,6 +28,14 @@ html, body {
   text-align: center;
   margin: 0 auto;
 }
+#no21{
+	margin-bottom:30px;
+	
+}
+#yes21{
+	margin-bottom:30px;
+	
+}
  
 #submitButton {
     display: flex;
