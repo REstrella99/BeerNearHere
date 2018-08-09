@@ -44,19 +44,12 @@ body { font-family: 'Mogra', cursive;
 }
 
 
-    font-family: 'Mogra', cursive;
-    font-size:50px;
-    margin-bottom:25px;
-    color:white;
-	
-}
+  
 .container {
 	width: 100%;
-	margin: auto;
 	font-weight: 900;
 	text-transform: uppercase;
 	text-align: center;
-	padding: 0 0 200px;
 	font-family: 'Mogra', cursive;
     	font-size:50px;
 	color:white;
@@ -94,24 +87,9 @@ a{
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
 *
-{
-	margin: 0;
-	padding: 0;
-}
 
-body
-{
-	font-family: 'Mogra', cursive;
-	font-size: 14px;
-	color: #999999;
-	word-wrap:break-word;
-  background-color:black;
-}
 
-p
-{
-	margin: 0 0 10px;
-}
+
 
 ul
 {
@@ -125,7 +103,7 @@ ul
 
 .animate {
 	font-size: 50px;
-	margin: 100px 0 0;
+	font-family: 'Mogra', cursive;
 
 }
 
