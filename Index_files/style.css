@@ -7,7 +7,7 @@ html, body {
 
 .quest{
 	margin-bottom:10px;
-	background-color: rgb(241, 199, 97);
+	background-color: white;
 	font-family: 'Mogra', cursive;
 	
 	
@@ -71,7 +71,9 @@ html, body {
 }
 
 #page5 {
-    background-image: url("simp.jpg");
+    background-image: url(https://thumbs.gfycat.com/UnfortunateDesertedChinchilla-size_restricted.gif);
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 a{
     color:white;
