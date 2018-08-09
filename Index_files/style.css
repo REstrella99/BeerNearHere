@@ -6,7 +6,7 @@ html, body {
 }
 
 .quest{
-	margin-bottom:5px;
+	margin-bottom:10px;
 	background-color: rgb(241, 199, 97);
 	font-family: 'Mogra', cursive;
 	
@@ -62,7 +62,7 @@ html, body {
 }
 
 #page3 {
-    background-color: rgb(241, 228, 215);
+    background-color: rgb(241, 199, 97);
 }
 
 #page4 {
@@ -71,7 +71,7 @@ html, body {
 }
 
 #page5 {
-    background-color: rgb(241, 228, 215);
+    background-color: rgb(241, 199, 97);
 }
 a{
     color:white;
