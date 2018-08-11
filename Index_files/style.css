@@ -4,11 +4,19 @@ html, body {
     font-family: Lato;
     color: white;
 }
+ 
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: black;
+}
+form {
+    display:flex;}
 
 .quest{
 	margin-bottom:10px;
-	background-color: white;
-	font-family: 'Mogra', cursive;
+	background-color:white;
+	font-family:'Mogra', cursive;
 	
 	
 	
@@ -72,7 +80,7 @@ html, body {
 
 #page5 {
     background-image: url(https://thumbs.gfycat.com/UnfortunateDesertedChinchilla-size_restricted.gif);
-    background-size: 50%;
+    background-size: 45%;
     background-repeat: no-repeat;
 }
 a{
@@ -139,11 +147,11 @@ a{
 }
 
 h4{
-	margin-bottom: 1000px;
+	margin-bottom: 80%;
         float: right;
 	font-family: 'Mogra', cursive;
-	margin-right: 50px;
-    	margin-top: 63px;
+
+    	
 	
 }
 
@@ -161,16 +169,20 @@ h4{
     font-size: 15px;
     font-weight: 300;
   }
-   #infowindow-content .title {
+
+  #infowindow-content .title {
     font-weight: bold;
   }
-   #infowindow-content {
+
+  #infowindow-content {
     display: none;
   }
-   #map #infowindow-content {
+
+  #map #infowindow-content {
     display: inline;
   }
-   .pac-card {
+
+  .pac-card {
     margin: 10px 10px 0 0;
     border-radius: 2px 0 0 2px;
     box-sizing: border-box;
@@ -180,20 +192,24 @@ h4{
     background-color: #fff;
     font-family: Roboto;
   }
-   #pac-container {
+
+  #pac-container {
     padding-bottom: 12px;
     margin-right: 12px;
   }
-   .pac-controls {
+
+  .pac-controls {
     display: inline-block;
     padding: 5px 11px;
   }
-   .pac-controls label {
+
+  .pac-controls label {
     font-family: Roboto;
     font-size: 13px;
     font-weight: 300;
   }
-   #pac-input {
+
+  #pac-input {
     background-color: #fff;
     font-family: Roboto;
     font-size: 15px;
@@ -203,10 +219,12 @@ h4{
     text-overflow: ellipsis;
     width: 400px;
   }
-   #pac-input:focus {
+
+  #pac-input:focus {
     border-color: #4d90fe;
   }
-   #title {
+
+  #title {
     color: #fff;
     background-color: #4d90fe;
     font-size: 25px;
