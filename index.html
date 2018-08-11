@@ -253,8 +253,22 @@
             <h2 id="outcomesTitle"></h2>
             <h4 style="margin-bottom: 30%; float: right; font-family: 'Mogra', cursive; margin-right: 180px; font-size: 25px">*These custom beer recommendations should suit your fancy*</h4>
             <ul class="list-group" id="suggestedBeers">
-                    
-		   
+              <table id="table" class="hidden">
+                <tr>
+                    <th>Beer</th>
+                    <th>Flavor</th>
+                </tr>
+            </table>
+            
+              <!--populate this list with beers via "li" with class="list-group-item" that come from the API-->
+            <!--make it so that when the beer is clicked a description comes up of the beer with some other info-->
+            </ul>
+            <!-- We wanted a picture from the brewery we are recommending as the background-->
+      </div>
+    </div>
+  </div>
+  
+  
 <script>
   // Initialize Firebase
   var config = {
@@ -273,4 +287,3 @@
 <script src="Index_files/app.js.download"></script>
 </body>
 </html>
-
