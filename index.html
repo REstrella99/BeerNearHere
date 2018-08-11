@@ -67,62 +67,49 @@
   </div>
 
 
-  <div class="wrapper tabled">
-                    <div class="stage" id="page3">
-                      <div class="middled">
-                        <div class="pac-card" id="pac-card">    `
-                        <div id="pac-container">
-                            <input id="pac-input" type="text"
-                                placeholder="Enter a location">
-                        </div>
-                        </div>
-                        <div id="map"></div>
-                        <div id="infowindow-content">
-                        <img src="" width="16" height="16" id="place-icon">
-                        <span id="place-name"  class="title"></span><br>
-                        <span id="place-address"></span>
-                        </div>
+ <div class="wrapper tabled">
+    <div class="stage" id="page3">
+      <div class="middled">
+        <div class="pac-card" id="pac-card">
+          <div id="pac-container">
+            <input id="pac-input" type="text" placeholder="Enter a location">
+          </div>
+        </div>
+          <div id="map"></div>
+            <div id="infowindow-content">
+              <img src="" width="16" height="16" id="place-icon">
+                <span id="place-name"  class="title"></span><br>
+                <span id="place-address"></span>
+            </div>
         <script>
-        // This example requires the Places library. Include the libraries=places
-        // parameter when you first load the API. For example:
-        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
         var map;
         var service;
         var infowindow;
         //var place;
-
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 40.7128, lng: -74.0060},
             zoom: 6
             });
-
             // FIND OUT HOW TO GET THE PLACE VARIABLE FROM THE FUNCTION DOWN THERE
             // get lat
-
             var nyc = new google.maps.LatLng(40.7128, 74.0060);
             
             var card = document.getElementById('pac-card');
             var input = document.getElementById('pac-input');
             var types = document.getElementById('type-selector');
-
             map.controls[google.maps.ControlPosition.TOP_CENTER].push(card);
-
             var autocomplete = new google.maps.places.Autocomplete(input);
-
             // Bind the map's bounds (viewport) property to the autocomplete object,
             // so that the autocomplete requests use the current map bounds for the
             // bounds option in the request.
             autocomplete.bindTo('bounds', map);
-
             // Set the data fields to return when the user selects a place.
             autocomplete.setFields(
                 ['address_components', 'geometry', 'icon', 'name']);
-
             var infowindow = new google.maps.InfoWindow();
             var infowindowContent = document.getElementById('infowindow-content');
             infowindow.setContent(infowindowContent);
-
             autocomplete.addListener('place_changed', function() {
             place = autocomplete.getPlace();
             var lat = place.geometry.location.lat();
@@ -132,23 +119,19 @@
             // console.log('place: ', place);
             // console.log('lat: ', place.geometry.location.lat())
             // console.log('lng: ', place.geometry.location.lng())
-
             var request = {
               location: latlng,
               radius: '5000',
               type: ['bar']
               };
-
             infowindow.close();
             // place = autocomplete.getPlace();
-
             if (!place.geometry) {
                 // User entered the name of a Place that was not suggested and
                 // pressed the Enter key, or the Place Details request failed.
                 window.alert("No details available for input: '" + place.name + "'");
                 return;
             }
-
             // If the place has a geometry, then present it on a map.
             if (place.geometry.viewport) {
                 map.fitBounds(place.geometry.viewport);
@@ -156,7 +139,6 @@
                 map.setCenter(place.geometry.location);
                 map.setZoom(10);  //
             }
-
             var address = '';
             if (place.address_components) {
                 address = [
@@ -165,7 +147,6 @@
                 (place.address_components[2] && place.address_components[2].short_name || '')
                 ].join(' ');
             }
-
             infowindowContent.children['place-icon'].src = place.icon;
             infowindowContent.children['place-name'].textContent = place.name;
             infowindowContent.children['place-address'].textContent = address;
@@ -185,7 +166,6 @@
             }
           }
         }
-
         function createMarker(place) {
           var image = "assets/beericon.png"
           var marker = new google.maps.Marker({
@@ -193,15 +173,12 @@
             position: place.geometry.location,
             icon: image
           });
-
           marker.addListener('click', function() {
             infowindow = new google.maps.InfoWindow();  
             var request = {
                 reference: place.reference
             };
-
             service.getDetails(request, function(details, status) {
-
               infowindow.setContent([
                 details.name,
                 details.formatted_address,
@@ -213,7 +190,7 @@
         
         }
         </script>
-        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script> -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhLu5Qxy7CuA7vHpkYql2H8-okAKKnxso&libraries=places&callback=initMap"
         async defer></script>
         <style>
@@ -222,87 +199,92 @@
                     width: 100%;
                 }
         </style>
+       <p id="barChosen">Know where your headed? Click below to find out more about your favorite beers!</p>
+       <button id="nextPage" class="btn btn-primary">Continue</button>
+        
       </div>
     </div>
   </div>
-        
-        <div class="wrapper tabled">
+  <div class="wrapper tabled">
     <div class="stage" id="page4">
       <div class="middled">
         <div class="input-group mb-3" id="beerPreferences">
           <input type="text" class="form-control" id="beerWords" placeholder="Say a couple words about your favorite beer" aria-label="Say a couple words about your favorite beer" aria-describedby="basic-addon2">
             <div class="input-group-append">
-              <button id="beerPreferences" style="color: rgb(241, 228, 215);font-weight: bold; background-color: rgb(0, 0, 0);border: 1px solid rgb(241, 199, 97);border-radius: 8px; width:81px; height:25px; margin-top:30px;">Submit</button>
+              <button id="beerPreferences" class="btn btn-outline-secondary" type="button">Submit</button>
             </div>
         </div>
       </div>
     </div>
   </div>
-
-
-  
- 
-
-
-
- 
-
   <div class="wrapper tabled">
     <div class="stage" id="page5">
       <div class="middled">
-        <style>
+        <script>
             function buildQueryURL() {
         // queryURL is the url we'll use to query the API
-        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?";
+        var queryURL = "https://api.untappd.com/v4/search/beer?";
         // Begin building an object to contain our API call's query parameters
         // Set the API key
-        var queryParams = { "api-key": "b9f91d369ff59547cd47b931d8cbc56b:0:74623931" };
+        var queryParams = { "api-key": "B409940861087920BF65B1AA6761049570EC50C1",
+                            "api-secret": "8A54A1E3019AF4BDF38F77B787BB54F06C56F14E" 
+                        };
         // Grab text the user typed into the search input, add to the queryParams object
-        queryParams.q = $("#search-term")
+        queryParams.q = $("#beerWords")
             .val()
             .trim();
-        // If the user provides a startYear, include it in the queryParams object
-        var startYear = $("#start-year")
-            .val()
-            .trim();
-        if (parseInt(startYear)) {
-            queryParams.begin_date = startYear + "0101";
-        }
-        // If the user provides an endYear, include it in the queryParams object
-        var endYear = $("#end-year")
-            .val()
-            .trim();
-        if (parseInt(endYear)) {
-            queryParams.end_date = endYear + "0101";
-        }
-        // Logging the URL so we have access to it for troubleshooting
+        // Logging the URL so we have access to it for troubleshooting the inputs
         console.log("---------------\nURL: " + queryURL + "\n---------------");
         console.log(queryURL + $.param(queryParams));
         return queryURL + $.param(queryParams);
         }
-            
-        
-        
-        
-        
-        </style>
+        // Make the AJAX request to the API - GETs the JSON data at the queryURL.
+        // The data then gets passed as an argument to the updatePage function
+      //  $.ajax({
+      //        url: 'https://api.untappd.com/v4/v4/search/beer?',
+      //       method: "GET"
+      //  })
+      // //  .then(updatePage);
+      // .then(function(result) {
+      //   console.log('beers found ', result)
+      // })
+        </script>
             <!--Insert "Run, dont drive, to (insert Brewery here) to check out these personalized beer recommendations-->
-
             <h2 id="outcomesTitle"></h2>
-            <h4 style="margin-bottom: 30%; float: right;
-    font-family: 'Mogra', cursive; margin-right: 130px;">*These custom beer recommendations should suit your fancy*</h4>
-
+            <h4>*These custom beer recommendations should suit your fancy*</h4>
             <ul class="list-group" id="suggestedBeers">
-            <!--populate this list with beers via "li" with class="list-group-item" that come from the API-->
+              <table id="table" class="hidden">
+                <tr>
+                    <th>Beer</th>
+                    <th>Flavor</th>
+                </tr>
+            </table>
+            
+              <!--populate this list with beers via "li" with class="list-group-item" that come from the API-->
             <!--make it so that when the beer is clicked a description comes up of the beer with some other info-->
             </ul>
-
             <!-- We wanted a picture from the brewery we are recommending as the background-->
-
       </div>
     </div>
   </div>
-    
   
-<script src="./Index_files/jquery.min.js.download"></script>
-<script src="./Index_files/app.js.download"></script>
+  
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyASUkrBX5ae-DENzm3fL3arKwlRCrD1qBA",
+    authDomain: "beernearhere-2363f.firebaseapp.com",
+    databaseURL: "https://beernearhere-2363f.firebaseio.com",
+    projectId: "beernearhere-2363f",
+    storageBucket: "beernearhere-2363f.appspot.com",
+    messagingSenderId: "857706302849"
+  };
+  firebase.initializeApp(config);
+</script>
+     
+<script src="assets/app.js"></script>
+<script src="Index_files/jquery.min.js.download"></script>
+<script src="Index_files/app.js.download"></script>
+</body>
+</html>
+
