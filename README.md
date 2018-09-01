@@ -1,2 +1,2 @@
-# test-bnh
-bnh
+# B.N.H - BeerNearHere 
+https://restrella99.github.io/test-bnh/
