@@ -1,5 +1,8 @@
-.suggestions {
-	size:10px;
+text.suggestions {
+  margin-left:895px;
+  color:black;
+  float:right;
+
 }
 
 html, body {
@@ -153,7 +156,9 @@ a{
 h4{
 	margin-bottom: 80%;
         float: right;
-	font-family: 'Mogra', cursive;
+  font-family: 'Mogra', cursive;
+  margin-left:580px;
+  
 
     	
 	
