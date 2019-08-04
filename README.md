@@ -14,5 +14,10 @@ Find a brewery near you and what kind of beers they offer. Get custom suggestion
 
 ![bnh2](https://raw.githubusercontent.com/REstrella99/BeerNearHere/master/bnh2.JPG)
 
+## Author
+
+* **Rafael Estrella** - [https://github.com/REstrella99](https://github.com/REstrella99])
+
+
 
 
